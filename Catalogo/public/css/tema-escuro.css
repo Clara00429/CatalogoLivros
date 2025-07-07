@@ -1,0 +1,27 @@
+.dark body {
+    background-color: #1e1e2f;
+    color: #f1f1f1;
+}
+
+.dark .navbar {
+    background-color: #4a1f58 !important;
+}
+
+.dark .card {
+    background-color: #2e2040;
+    color: #f1f1f1;
+}
+
+.dark .btn-primary {
+    background-color: #642764;
+    border-color: #642764;
+}
+
+.dark .btn-outline-secondary {
+    color: #e0d0e8;
+    border-color: #a774b1;
+}
+
+.dark a.nav-link {
+    color: #e0d0e8 !important;
+}

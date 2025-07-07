@@ -10,15 +10,16 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="{{ asset('css/tema-escuro.css') }}">
+
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
-        <div class="absolute top-4 right-4 z-50">
-            <button id="toggle-dark" class="px-3 py-2 rounded text-white bg-[#642764] hover:bg-[#4e1d51] transition text-sm shadow">
-                Alternar tema
-            </button>
+        <div class="ms-auto d-flex align-items-center">
+            <x-alternar-tema />
         </div>
 
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
@@ -38,28 +39,6 @@
                 {{ $slot }}
             </main>
         </div>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const toggle = document.getElementById('toggle-dark');
-                const html = document.documentElement;
-
-                // Salvar preferência no localStorage
-                if (localStorage.getItem('theme') === 'dark') {
-                    html.classList.add('dark');
-                }
-
-                toggle?.addEventListener('click', function () {
-                    html.classList.toggle('dark');
-                    if (html.classList.contains('dark')) {
-                        localStorage.setItem('theme', 'dark');
-                    } else {
-                        localStorage.setItem('theme', 'light');
-                    }
-                });
-            });
-        </script>
-
-
+    <script src="//unpkg.com/alpinejs" defer></script>
     </body>
 </html>
