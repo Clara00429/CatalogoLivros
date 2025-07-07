@@ -19,7 +19,15 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{{route('dashboard')}}">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Minha Lista</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Favoritos</a>
                     </li>
 
                     <li class="nav-item">
@@ -29,6 +37,7 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Contatos</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Sair</a>
                     </li>
