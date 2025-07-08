@@ -17,6 +17,7 @@ class Livro extends Model
         'status',
         'user_id',
         'imagem',
+        'paginas',
     ];
 
     public function user()
