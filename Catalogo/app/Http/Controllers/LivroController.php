@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use App\Models\Livro;
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class LivroController extends Controller
 {
@@ -15,6 +17,20 @@ class LivroController extends Controller
         //
     }
 
+    public function minhaLista()
+    {
+        $user = Auth::user();
+
+        if (!$user) {
+            return redirect()->route('login');
+        }
+
+        $livros = Livro::where('user_id', $user->id)
+            ->where('status', 'quero ler')
+            ->get();
+
+        return view('livros.minhaLista', compact('livros'));
+    }
     /**
      * Show the form for creating a new resource.
      */

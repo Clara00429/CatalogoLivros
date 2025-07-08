@@ -11,18 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('livro', function (Blueprint $table) {
-            $table->id();
-            $table->string('titulo');
-            $table->string('autor');
-            $table->string('editora');
-            $table->string('categoria');
-            $table->year('ano_publicacao')->nullable();
-            $table->integer('isbn');
-            $table->text('descricao')->nullable();
-            $table->integer('paginas');
-            $table->timestamps();
-        });
+        Schema::create('livros', function (Blueprint $table) {
+        $table->id();
+        $table->string('titulo');
+        $table->string('autor')->nullable();
+        $table->string('editora')->nullable();
+        $table->year('ano')->nullable();
+        $table->string('status')->default('quero ler');
+        $table->string('imagem')->nullable();
+        $table->foreignId('user_id')->constrained()->onDelete('cascade');
+        $table->timestamps();
+    });
 
     }
 

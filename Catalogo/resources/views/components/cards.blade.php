@@ -4,10 +4,10 @@
 
         <div class="card-body d-flex flex-column justify-content-between ms-3">
             <h5 class="card-title mb-1">{{ $titulo }}</h5>
-            <p class="text-muted mb-1">Autor: {{ $autor }}</p>
-            <p class="text-muted mb-1">Ano: {{ $ano }}</p>
-            <p class="text-muted mb-1">Editora: {{ $editora }}</p>
-            <p class="text-muted mb-3">Páginas: {{ $paginas }}</p>
+            <p class="text-secondary mb-1">Autor: {{ $autor }}</p>
+            <p class="text-secondary mb-1">Ano: {{ $ano }}</p>
+            <p class="text-secondary mb-1">Editora: {{ $editora }}</p>
+            <p class="text-secondary mb-3">Páginas: {{ $paginas }}</p>
 
             <div class="d-flex align-items-center gap-2">
                 <select class="form-select form-select-sm" style="width: 130px;" aria-label="Status do livro">

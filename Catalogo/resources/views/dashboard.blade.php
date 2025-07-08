@@ -35,6 +35,16 @@
                 imagem="{{ asset('images/livros/1984.jpg') }}"            
             />
         </div>
+        <div class="col">
+            <x-cards
+                titulo="A Culpa é das Estrelas" 
+                autor="John Green" 
+                ano="2012" 
+                editora="Intríseca" 
+                paginas="288" 
+                imagem="{{ asset('images/livros/estrelas.jpg') }}"            
+            />
+        </div>
     </div>
 </div>
 @endsection

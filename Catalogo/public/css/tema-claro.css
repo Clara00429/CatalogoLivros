@@ -1,0 +1,78 @@
+:root {
+    --roxo-claro: #d1bcd6;
+    --roxo-claro-escuro: #b59ac1;
+    --roxo-principal: #642764;
+    --roxo-principal-hover: #4e1d51;
+}
+
+body {
+    background-color: var(--roxo-claro);
+    color: #2c2c2c; /* cinza escuro para boa leitura */
+}
+
+a {
+    color: var(--roxo-principal);
+}
+
+a:hover {
+    color: var(--roxo-principal-hover);
+}
+
+.btn-primary {
+    background-color: var(--roxo-principal);
+    border-color: var(--roxo-principal);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--roxo-principal-hover);
+    border-color: var(--roxo-principal-hover);
+}
+
+.btn-outline-primary {
+    color: var(--roxo-principal);
+    border-color: var(--roxo-claro);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--roxo-claro-escuro);
+    color: white;
+    border-color: var(--roxo-claro-escuro);
+}
+
+.border-primary {
+    border-color: var(--roxo-claro) !important;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    border-color: var(--roxo-claro);
+    background-color: white;
+    color: #2c2c2c;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--roxo-principal);
+    box-shadow: 0 0 0 0.2rem rgba(100, 39, 100, 0.25);
+    background-color: white;
+    color: #2c2c2c;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid var(--roxo-claro);
+    color: #2c2c2c;
+}
+
+.card-header,
+.card-footer {
+    background-color: var(--roxo-claro);
+    color: #2c2c2c;
+}

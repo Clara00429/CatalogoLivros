@@ -25,3 +25,11 @@
 .dark a.nav-link {
     color: #e0d0e8 !important;
 }
+
+.texto-secundario {
+  color: #6c757d;
+}
+
+.dark .text-secondary {
+  color: #d1d1d1; 
+}
