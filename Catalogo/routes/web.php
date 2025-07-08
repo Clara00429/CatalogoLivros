@@ -12,9 +12,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/minha-lista', [LivroController::class, 'minhaLista'])
-    ->middleware(['auth', 'verified'])
-    ->name('minha-lista');
+Route::get('/minha-lista', [LivroController::class, 'minhaLista'])->name('minhaLista')->middleware('auth');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

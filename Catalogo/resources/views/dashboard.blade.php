@@ -20,7 +20,7 @@
                 titulo="O Pequeno Príncipe" 
                 autor="Antoine de Saint-Exupéry" 
                 ano="1943" 
-                editora="Editora Arqueirp" 
+                editora="Editora Arqueiro" 
                 paginas="96" 
                 imagem="{{ asset('images/livros/peqPrin.jpg') }}"
             />

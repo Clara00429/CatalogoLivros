@@ -29,7 +29,7 @@ class LivroController extends Controller
             ->where('status', 'quero ler')
             ->get();
 
-        return view('livros.minhaLista', compact('livros'));
+        return view('minhaLista', compact('livros'));
     }
     /**
      * Show the form for creating a new resource.
