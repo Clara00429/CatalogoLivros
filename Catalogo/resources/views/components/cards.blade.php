@@ -10,13 +10,7 @@
             <p class="text-secondary mb-3">Páginas: {{ $paginas }}</p>
 
             <div class="d-flex align-items-center gap-2">
-                <select class="form-select form-select-sm" style="width: 130px;" aria-label="Status do livro">
-                    <option selected>Status</option>
-                    <option value="lido">Lido</option>
-                    <option value="lendo">Lendo</option>
-                    <option value="quero ler">Quero Ler</option>
-                    <option value="dropei">Dropei</option>
-                </select>
+                <x-status />
 
                 <button class="btn btn-warning btn-sm">Favoritar</button>
                 <button class="btn btn-primary btn-sm">Detalhes</button>

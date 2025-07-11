@@ -7,28 +7,24 @@ use Illuminate\View\Component;
 
 class CardMinhaLista extends Component
 {
-    public $id;
     public $titulo;
     public $autor;
     public $ano;
     public $editora;
     public $paginas;
     public $imagem;
-    public $status;
 
     /**
      * Create a new component instance.
      */
-    public function __construct($id, $titulo, $autor = null, $ano = null, $editora = null, $paginas = null, $imagem = null, $status = null)
+    public function __construct($titulo, $autor, $ano, $editora, $paginas, $imagem)
     {
-        $this->id = $id;
         $this->titulo = $titulo;
         $this->autor = $autor;
         $this->ano = $ano;
         $this->editora = $editora;
         $this->paginas = $paginas;
         $this->imagem = $imagem;
-        $this->status = $status;
     }
 
     /**

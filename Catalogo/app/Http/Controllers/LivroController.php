@@ -2,6 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Routing\Controller as BaseController;
+
 use Illuminate\Support\Facades\Auth;
 use App\Models\Livro;
 use Illuminate\Http\Request;
@@ -9,6 +14,7 @@ use App\Models\User;
 
 class LivroController extends Controller
 {
+    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
     /**
      * Display a listing of the resource.
      */
@@ -26,7 +32,6 @@ class LivroController extends Controller
         }
 
         $livros = Livro::where('user_id', $user->id)
-            ->where('status', 'quero ler')
             ->get();
 
         return view('minhaLista', compact('livros'));
@@ -67,9 +72,10 @@ class LivroController extends Controller
      * Update the specified resource in storage.
      */
     public function update(Request $request, Livro $livro)
-    {
-        //
-    }
+{
+    
+}
+
 
     /**
      * Remove the specified resource from storage.

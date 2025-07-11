@@ -26,7 +26,6 @@ class Cards extends Component
         $this->ano = $ano;
         $this->editora = $editora;
         $this->paginas = $paginas;
-
     }
 
     /**

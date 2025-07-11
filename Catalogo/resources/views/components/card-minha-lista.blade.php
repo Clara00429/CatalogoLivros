@@ -23,16 +23,6 @@
             </div>
 
             <div class="d-flex align-items-center gap-2 mt-2">
-                <form method="POST" action="{{ route('livros.update-status', $id) }}">
-                    @csrf
-                    @method('PATCH')
-                    <select name="status" class="form-select form-select-sm" style="width: 130px;" onchange="this.form.submit()">
-                        <option value="lido" @selected($status == 'lido')>Lido</option>
-                        <option value="lendo" @selected($status == 'lendo')>Lendo</option>
-                        <option value="quero ler" @selected($status == 'quero ler')>Quero Ler</option>
-                        <option value="dropei" @selected($status == 'dropei')>Dropei</option>
-                    </select>
-                </form>
 
                 <form method="POST" action="{{ route('livros.favoritar', $id) }}">
                     @csrf
